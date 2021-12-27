@@ -17,23 +17,19 @@ function toCommas(x) {
      while (pattern.test(x))
 	   x = x.replace(pattern, "$1,$2");
 	return x;
-}
-
-exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit, limitCount, glimit, gcount) => {
-	return `*── 「 ${setting.botName} - MD Beta 」 ──*
-	
-  _*${ucapanWaktu} ${pushname !== undefined ? pushname : 'Kak'}*_
-
-    Library : *Baileys-MD*.
+}Library : *Baileys-MD*.
     Prefix : ( ${prefix} )
     Tanggal Server : ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}
     Waktu Server : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}
 
-	Status : ${isOwner ? 'Owner' : isPremium ? 'Premium' : 'Free'}
-	Limit Harian : ${isOwner ? '-' : isPremium ? 'Unlimited' : getLimit(sender, limitCount, limit)}
-	Limit Game : ${isOwner ? '-' : cekGLimit(sender, gcount, glimit)}
-	Balance : $${toCommas(getBalance(sender, balance))}
 
+exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit, limitCount, glimit, gcount) => {
+	return `*── 「 ${setting.botName} 」 ──*
+	
+  *Bantu Subscribe*
+   *link* : https://youtube.com/c/IsmailKurama
+    
+	
   *( 📍 )  Main Menu*
   ≻ ${prefix}menu
   ≻ ${prefix}owner
@@ -99,5 +95,5 @@ exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit,
   ≻ ${prefix}addprem
   ≻ ${prefix}delprem
 
-`+'     \`\`\`Powered by Nodejs\`\`\`'
+`+'     \`\`\`ISMAIL KURAMA\`\`\`'
 }

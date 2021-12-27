@@ -215,10 +215,13 @@ module.exports = async(conn, msg, m, setting) => {
 		}
 		
 		const buttonsDefault = [
-			{ callButton: { displayText: `Call Owner!`, phoneNumber: `+6285791458996` } },
-			{ urlButton: { displayText: `Script!`, url : `https://github.com/rtwone/chitandabot` } },
-			{ quickReplyButton: { displayText: `🧑 Owner`, id: `${prefix}owner` } },
-			{ quickReplyButton: { displayText: `💰 Donasi`, id: `${prefix}donate` } }
+			{ urlButton: { displayText: `S U B S C R I B E`, url : `https://youtube.com/c/IsmailKurama` } },
+			{ urlButton: { displayText: `ISMAIL KURAMA`, url : `https://youtube.com/c/IsmailKurama` } },
+			{ urlButton: { displayText: `THANKS YOU`, url : `https://youtube.com/c/IsmailKurama` } },
+			{ quickReplyButton: { displayText: `P`, id: `${prefix}p` } },
+			{ quickReplyButton: { displayText: `P`, id: `${prefix}p` } },
+			{ quickReplyButton: { displayText: `P`, id: `${prefix}p` } },
+			{ quickReplyButton: { displayText: `P`, id: `${prefix}p` } }
 		]
         
 		const isImage = (type == 'imageMessage')
@@ -305,7 +308,7 @@ module.exports = async(conn, msg, m, setting) => {
 			case prefix+'menu':
 			case prefix+'help':
 			    var teks = allmenu(sender, prefix, pushname, isOwner, isPremium, balance, limit, limitCount, glimit, gcount)
-			    conn.sendMessage(from, { caption: teks, location: { jpegThumbnail: fs.readFileSync(setting.pathimg) }, templateButtons: buttonsDefault, footer: 'NullTeam-ID © 2021', mentions: [sender] })
+			    conn.sendMessage(from, { caption: teks, location: { jpegThumbnail: fs.readFileSync(setting.pathimg) }, templateButtons: buttonsDefault, footer: 'Ismail Kurama', mentions: [sender] })
 				break
 			case prefix+'runtime':
 			    reply(runtime(process.uptime()))
@@ -317,7 +320,7 @@ module.exports = async(conn, msg, m, setting) => {
 		            break
 			case prefix+'donate':
 			case prefix+'donasi':
-			    reply(`──「 MENU DONATE 」──\n\nHi ${pushname} 👋🏻\n\`\`\`GOPAY : 085791458996\`\`\`\n\`\`\`PULSA : 085735338148 (Indosat)\`\`\`\nTerimakasih untuk kamu yang sudah donasi untuk perkembangan bot ini _^\n──「 THX FOR YOU ! 」──`)
+			    reply(`──「 MENU DONATE 」──\n\nHi ${pushname} 👋🏻\n\`\`\`P\`\`\`\n\`\`\`PULSA : 083805279906 (Axis)\`\`\`\nTerimakasih untuk kamu yang sudah donasi untuk perkembangan bot ini _^\n──「 THX FOR YOU ! 」──`)
 			    break
 			case prefix+'owner':
 			    for (let x of ownerNumber) {
@@ -930,6 +933,15 @@ module.exports = async(conn, msg, m, setting) => {
                     var limitPrib = `${getLimit(sender, limitCount, limit)}/${limitCount}`
                     textImg(`Limit : ${isPremium ? 'Unlimited' : limitPrib}\nLimit Game : ${cekGLimit(sender, gcount, glimit)}/${gcount}\nBalance : $${getBalance(sender, balance)}\n\nKamu dapat membeli limit dengan ${prefix}buylimit dan ${prefix}buyglimit untuk membeli game limit`)
                 }
+				break
+            default:
+if (chats == 'p') {
+   textImg(`Iya ada apa? ketik *${prefix}menu* untuk menggunakan bot`)
+}
+if (chats == 'P') {
+   textImg(`Iya ada apa? ketik *${prefix}menu* untuk menggunakan bot`)
+}
+
 				break
 			default:
 			if (!isGroup && isCmd) {

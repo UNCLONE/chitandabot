@@ -1,10 +1,10 @@
 {
-  "ownerNumber": ["6285791458996@s.whatsapp.net"],
-  "ownerName": ["r"],
-  "botName": "Chitanda Eru Bot",
-  "sessionName": "rtwone-md",
-  "pathimg": "./media/Chitanda.jpg",
-  "gamewaktu": 90,
+  "ownerNumber": ["6283805279906@s.whatsapp.net"],
+  "ownerName": ["𝐈𝐬𝐦𝐚𝐢𝐥 𝐊𝐮𝐫𝐚𝐦𝐚"],
+  "botName": "𝐈𝐬𝐦𝐚𝐢𝐥 𝐊𝐮𝐫𝐚𝐦𝐚",
+  "sessionName": "session",
+  "pathimg": "./media/mek.jpg",
+  "gamewaktu": 99,
   "limitCount": 25,
   "gcount": {
 	"prem": 35,
